@@ -1,13 +1,5 @@
 import { useState } from 'react';
 import supabase from '../supabase';
-import { 
-  UserIcon, 
-  AcademicCapIcon, 
-  PencilIcon, 
-  TrashIcon,
-  CheckIcon,
-  XMarkIcon
-} from '@heroicons/react/24/outline';
 
 export default function StudentRow({ student, onUpdate }) {
   const [name, setName] = useState(student.name);
@@ -33,7 +25,7 @@ export default function StudentRow({ student, onUpdate }) {
         <div className="flex items-center space-x-3">
           <div className="flex-shrink-0">
             <div className="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
-              <UserIcon className="h-6 w-6 text-indigo-600" />
+              <div className="h-6 w-6 text-indigo-600">👤</div>
             </div>
           </div>
           <div className="flex-1 min-w-0">
@@ -51,7 +43,7 @@ export default function StudentRow({ student, onUpdate }) {
         <div className="flex items-center space-x-3">
           <div className="flex-shrink-0">
             <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center">
-              <AcademicCapIcon className="h-6 w-6 text-purple-600" />
+              <div className="h-6 w-6 text-purple-600">🎓</div>
             </div>
           </div>
           <div className="flex-1 min-w-0">
@@ -73,7 +65,7 @@ export default function StudentRow({ student, onUpdate }) {
                 onClick={updateStudent}
                 className="inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-200"
               >
-                <CheckIcon className="h-4 w-4 mr-1" />
+                <div className="h-4 w-4 mr-1">✓</div>
                 Save
               </button>
               <button
@@ -84,7 +76,7 @@ export default function StudentRow({ student, onUpdate }) {
                 }}
                 className="inline-flex items-center px-3 py-1.5 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
               >
-                <XMarkIcon className="h-4 w-4 mr-1" />
+                <div className="h-4 w-4 mr-1">✕</div>
                 Cancel
               </button>
             </>
@@ -94,14 +86,14 @@ export default function StudentRow({ student, onUpdate }) {
                 onClick={() => setIsEditing(true)}
                 className="inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md text-indigo-600 bg-indigo-50 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
               >
-                <PencilIcon className="h-4 w-4 mr-1" />
+                <div className="h-4 w-4 mr-1">✎</div>
                 Edit
               </button>
               <button
                 onClick={deleteStudent}
                 className="inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md text-red-600 bg-red-50 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors duration-200"
               >
-                <TrashIcon className="h-4 w-4 mr-1" />
+                <div className="h-4 w-4 mr-1">🗑️</div>
                 Delete
               </button>
             </>

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import supabase from '../supabase';
-import { EnvelopeIcon, LockClosedIcon, AcademicCapIcon } from '@heroicons/react/24/outline';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -19,7 +18,7 @@ export default function Login() {
       <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-2xl shadow-xl">
         <div className="text-center">
           <div className="flex justify-center">
-            <AcademicCapIcon className="h-12 w-12 text-indigo-600" />
+            <div className="h-12 w-12 text-indigo-600 text-4xl">🎓</div>
           </div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Welcome Back
@@ -32,7 +31,7 @@ export default function Login() {
           <div className="rounded-md shadow-sm space-y-4">
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <EnvelopeIcon className="h-5 w-5 text-gray-400" />
+                <div className="h-5 w-5 text-gray-400">✉️</div>
               </div>
               <input
                 id="email"
@@ -44,7 +43,7 @@ export default function Login() {
             </div>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <LockClosedIcon className="h-5 w-5 text-gray-400" />
+                <div className="h-5 w-5 text-gray-400">🔒</div>
               </div>
               <input
                 id="password"
